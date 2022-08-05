@@ -4,7 +4,7 @@
   "description": "wpp tracking chat bot",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "André Moraes",
@@ -13,6 +13,11 @@
     "nodemon": "^2.0.19"
   },
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "pdfkit": "^0.13.0",
+    "request": "^2.88.2",
+    "whatsappcloudapi_wrapper": "^1.0.13"
   }
 }
