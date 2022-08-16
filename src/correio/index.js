@@ -1,12 +1,18 @@
 const axios = require('axios');
+require('dotenv').config();
+
+const correioUser = process.env.CORREIO_USER;
+const correioToken = process.env.CORREIO_TOKEN;
 
 const getTrackingData = async (codePackage) => {
   try {
-    const url = `https://api.linketrack.com/track/json?user=teste&token=1abcd00b2731640e886fb41a8a9671ad1434c599dbaa0a0de9a5aa619f29a83f&codigo=${codePackage}`;
-    const { data: { eventos, codigo }} = await axios.get(url)
+    const url = `https://api.linketrack.com/track/json?user=${correioUser}&token=${correioToken}&codigo=${codePackage}`;
+    const { data: { codigo, eventos } } = await axios.get(url)
   
-    return { eventos, codigo };
+    return { codigo, eventos };
   } catch ({ response: { status, data } }) {
     console.log(`Código: ${status}. ${data}`)
   }
 }
+
+module.exports = getTrackingData;
