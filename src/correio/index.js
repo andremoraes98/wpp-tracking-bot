@@ -14,3 +14,5 @@ const getTrackingData = async (codePackage) => {
     console.log(`Código: ${status}. ${data}`)
   }
 }
+
+module.exports = getTrackingData;
