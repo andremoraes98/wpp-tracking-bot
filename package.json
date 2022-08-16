@@ -4,7 +4,7 @@
   "description": "wpp tracking chat bot",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon src/correio"
   },
   "keywords": [],
   "author": "André Moraes",
